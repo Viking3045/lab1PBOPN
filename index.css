@@ -332,7 +332,7 @@ border-radius: 10px;
 
 .firstInput, .lastText{
 font-size: 20px;
-border-radius: 30px;
+/* border-radius: 30px; */
 overflow: auto;
 overflow-y: auto;
 scroll-behavior: smooth
