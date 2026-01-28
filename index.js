@@ -158,7 +158,7 @@ tableContainer2.innerHTML = tableHTML2
     const li = document.createElement("li")
     const title2 = document.createElement("h3")
     title2.classList = "calculation__name primaryTextcolor"
-        title2.textContent = "Кількість небезпечної речовини"
+        title2.textContent = "Кількість небезпечної речовини (т)"
         li.append(title2)
 
       const amountSubstance  = document.createElement("input")
@@ -260,7 +260,7 @@ console.log("arrrrrr", array)
 
       const amount1 = document.createElement("li");
       amount1.classList = "amountWhoAddItem";
-      amount1.textContent = `Кількість речовини: ${amount}`;
+      amount1.textContent = `Кількість речовини: ${amount} т`;
       ul.append(substance1, amount1);
 
       item.append(ul);
@@ -290,11 +290,11 @@ console.log("arrrrrr", array)
       submitFinaltForm2.addEventListener("click", heightOfCollapse);
   
       //Скидаємо данні форми та очищаємо обєкт
-      selectDangerousSubstance.selectedIndex = 0;
-      amountSubstance.value =""
-      obj.substance = 0;
-      obj.amount = 0;
-      obj.counter = 1;
+      // selectDangerousSubstance.selectedIndex = 0;
+      // amountSubstance.value =""
+      // obj.substance = 0;
+      // obj.amount = 0;
+      // obj.counter = 1;
     } else {
       alert("Будь ласка заповніть всі поля");
     }
@@ -990,10 +990,11 @@ b2.textContent = `Взвод/група :${obj.platoon} `
 // c.textContent = `Данні по експерименту`
 // c.style.fontWeight =  "bold"
 // c.style.textAlign = "center"
+const e1 = document.createElement("p")
+e1.textContent = `Речовина: ${obj.substance} в кількості ${obj.amount} т`
 const d1 = document.createElement("p")
-d1.textContent = `Належність до об'єкту підвищеної небезпек : ${obj.classForOne};`
-// const e = document.createElement("p")
-// e.textContent = `Розмір зразка: 60*150*30 мм;`
+d1.textContent = `Належність до об'єктів підвищеної небезпеки : ${obj.classForOne};`
+
 // const  f= document.createElement("p")
 // f.textContent = `Густина:${obj.density} г/см;`
 // const g = document.createElement("p")
@@ -1077,6 +1078,7 @@ y1.style.fontWeight =  "bold"
 // Назва зразка: ${obj.typeOfTree} ;
 first.append(a2)
 first.append(b2)
+first.append(e1)
 // first.append(c)
 first.append(d1)
 // first.append(e)
