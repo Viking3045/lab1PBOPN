@@ -16,6 +16,11 @@ selectMiddleName.addEventListener("change", inputMiddleName);
 selectLastName.addEventListener("change", inputLastName);
 btn.addEventListener("click", allInformation);
 
+window.addEventListener("beforeunload", function (e) {
+  e.preventDefault();
+  e.returnValue = ""; // обовʼязково для Chrome
+});
+
 const obj = {
   name: "",
   middleName: "",
@@ -108,26 +113,7 @@ function allInformation() {
 `;
 
 const tableContainer2 = document.createElement("div")
-const tableHTML2 = `<style>
-  .danger-table {
-    background: #000;
-    color: #fff;
-    border-collapse: collapse;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  .danger-table th, .danger-table td {
-    border: 1px solid #fff;
-    padding: 6px 10px;
-  }
-  .danger-table caption {
-    caption-side: top;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-  }
-</style>
+const tableHTML2 = `
 
 <table class="danger-table">
 <caption>Варіанти для визначення маси небезпечних речовин в тонах</caption>
@@ -267,9 +253,9 @@ console.log("arrrrrr", array)
   
       const item = document.createElement("li");
       const ul = document.createElement("ul");
-      ul.classList = "substanceWhoAdd";
+      ul.classList = "substanceWhoAdd cont";
       const substance1 = document.createElement("li");
-      substance1.classList = "substanceWhoAddItem  cont";
+      substance1.classList = "substanceWhoAddItem  ";
       substance1.textContent = `Небезпечна речовина: ${substance}`;
 
       const amount1 = document.createElement("li");
@@ -375,53 +361,7 @@ if(second === true){
 const firstStepEnd = document.createElement("button")
 const tableContainer3 = document.createElement("div")
 const tableHTML3 = `
-<style>
-  .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    background: #000;
-    padding: 6px;
-  }
 
-  .lab-table {
-    border-collapse: collapse;
-    min-width: 700px; /* щоб з'являвся скрол на 320px */
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .lab-table th, .lab-table td {
-    border: 1px solid #fff;
-    padding: 6px 8px;
-    white-space: nowrap;
-  }
-
-  .lab-table caption {
-    caption-side: top;
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 4px;
-    font-size: 14px;
-  }
-
-  .sticky-col {
-    position: sticky;
-    left: 0;
-    background: #000;
-    z-index: 2;
-  }
-
-  .sticky-head {
-    position: sticky;
-    top: 0;
-    background: #000;
-    z-index: 3;
-  }
-</style>
 
 <div class="table-wrapper">
 <table class="lab-table">

@@ -290,11 +290,11 @@ margin-bottom: 10px;
 }
 .cont{
   background: white;
-  width: 670px;
+  /* min-width: 670px; */
   cursor: pointer;
   border-radius: 15px;
   position: relative;
-  padding: 25px 10px;
+  padding: 25px 5px;
   color: black;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -331,13 +331,70 @@ border-radius: 10px;
 
 
 .firstInput, .lastText{
-font-size: 30px;
+font-size: 20px;
 border-radius: 30px;
 overflow: auto;
 overflow-y: auto;
 scroll-behavior: smooth
 }
-@media screen and (min-width: 1200px) {
+
+/* * Стилі таблиці */ */
+.dark-table {
+width: 100%;
+border-collapse: collapse;
+background-color: #000;
+color: #fff;
+font-family: Arial, sans-serif;
+}
+
+
+.dark-table caption {
+caption-side: top;
+color: #fff;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+
+.dark-table th,
+.dark-table td {
+border: 1px solid #fff;
+padding: 0px 0px;
+text-align: center;
+font-size: 10px;
+}
+
+
+.dark-table thead th {
+background-color: #111;
+font-weight: bold;
+}
+
+
+.danger-table {
+    background: #000;
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+font-size: 10px;
+  }
+  .danger-table th, .danger-table td {
+    border: 1px solid #fff;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .danger-table caption {
+    caption-side: top;
+    color: #fff;
+    font-weight: bold;
+   margin-bottom: 10px;
+  }
+
+
+
+@media screen and (min-width: 768x) {
 .tankWhoAdd {
  min-width: 630px;
  padding-left: 0;
@@ -363,7 +420,7 @@ border-radius: 30px;
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 0px;
-    min-width: 630px;
+    min-width: 30px;
     margin-bottom: 30px;
     border-radius: 30px;
     font-size: 40px;
@@ -397,8 +454,6 @@ margin-bottom: -250px;
  padding-left: 30px;
  border-radius: 30px;
 }
-}
-
 /* Стилі таблиці */
 .dark-table {
 width: 100%;
@@ -420,7 +475,7 @@ margin-bottom: 10px;
 .dark-table th,
 .dark-table td {
 border: 1px solid #fff;
-padding: 6px 10px;
+padding: 20px 20px;
 text-align: center;
 }
 
@@ -429,3 +484,70 @@ text-align: center;
 background-color: #111;
 font-weight: bold;
 }
+
+
+.danger-table {
+    background: #000;
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+
+  }
+  .danger-table th, .danger-table td {
+    border: 1px solid #fff;
+    padding: 20px 20px;
+    text-align: center;
+  
+  }
+  .danger-table caption {
+    caption-side: top;
+    color: #fff;
+    font-weight: bold;
+   margin-bottom: 10px;
+  }
+
+
+ 
+
+  .lab-table {
+      background: #000;
+    color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border: 1px solid #fff;
+  }
+
+  .lab-table th, .lab-table td {
+    border: 1px solid #fff;
+    padding: 20px 20px;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+
+  .lab-table caption {
+     caption-side: top;
+    color: #fff;
+    font-weight: bold;
+   margin-bottom: 10px;
+  }
+
+  .sticky-col {
+    position: sticky;
+    left: 0;
+    background: #000;
+    z-index: 2;
+    border: 1px solid #fff;
+  }
+
+  .sticky-head {
+    position: sticky;
+    top: 0;
+    background: #000;
+    z-index: 3;
+    border: 1px solid #fff;
+  }
+}
+
+
